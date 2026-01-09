@@ -17,7 +17,7 @@ public class ConexaoDAO {
         String driveJBC = "com.mysql.jdbc.Driver";
         String url = "jdbc:mysql://localhost:3306/dbwindows";
         String user = "root";
-        String senha = "Q2e4t6u8o0@";
+        String senha = "";
         
     try {
         Class.forName(driveJBC);
@@ -36,3 +36,4 @@ public class ConexaoDAO {
     return conexao;
     }
 }
+
