@@ -26,7 +26,7 @@ public class Relogio extends JPanel implements ActionListener {
         
         this.setBounds(1280 - 150, 0, 150, 65);
         this.setOpaque(false);
-        timer = new Timer(60/1000, this);
+        timer = new Timer(1000, this);
         timer.start();
     }
 
@@ -58,3 +58,4 @@ public class Relogio extends JPanel implements ActionListener {
     }
 
 }
+
