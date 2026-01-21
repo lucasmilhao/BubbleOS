@@ -108,7 +108,13 @@ public abstract class Atalho extends JPanel implements MouseListener {
 
         if(imagem != null) g2d.drawImage(this.getImagem(),(getWidth() / 2) - (LARGURA_IMAGEM / 2),6, LARGURA_IMAGEM, ALTURA_IMAGEM, null);
         g2d.setFont(new Font("Arial", Font.PLAIN, 9));
-        if(!nome.isBlank()) g2d.drawString(nome, (getWidth() - g2d.getFontMetrics().stringWidth(nome)) / 2, getHeight() - 5);
+        if(!nome.isBlank()){
+            g2d.setColor(Color.black);
+            g2d.drawString(nome, (getWidth() - g2d.getFontMetrics().stringWidth(nome)) / 2, getHeight() - 4);
+            g2d.setColor(Color.white);
+            g2d.drawString(nome, (getWidth() - g2d.getFontMetrics().stringWidth(nome)) / 2, getHeight() - 5);
+
+        } 
     }
 
     public void pintarQuandoPressionado(Graphics2D g2d) {
@@ -497,3 +503,4 @@ public abstract class Atalho extends JPanel implements MouseListener {
     
 
 }
+
