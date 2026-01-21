@@ -50,7 +50,7 @@ public class Renomear extends JFrame {
     }
     
     public void renomear() {
-        if (atalho.isHasComponent() && !nome.getText().isEmpty()){
+        if (atalho.isHasComponent() && !nome.getText().isBlank()){
             atalho.setNome(nome.getText());
             if(atalho instanceof Pasta pasta) {
                 if(pasta.getExplorar() != null) {
@@ -68,3 +68,4 @@ public class Renomear extends JFrame {
         }
     }
 }
+
