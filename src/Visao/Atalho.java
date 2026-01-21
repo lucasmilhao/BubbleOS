@@ -291,6 +291,8 @@ public abstract class Atalho extends JPanel implements MouseListener {
         if(getParent() instanceof TelaPrincipal tela) {
 
             if(Atalho.getAgarrado() != null && this != Atalho.getAgarrado()) {
+                Atalho[][] a = tela.getArray();
+                a[agarrado.getI()][agarrado.getJ()] = this;
                 int finalX = agarrado.getPosicaoInicialX();
                 int finalY = agarrado.getPosicaoInicialY();
                 int finalI = agarrado.getI();
@@ -303,6 +305,7 @@ public abstract class Atalho extends JPanel implements MouseListener {
                 this.setPosicaoInicialY(finalY);
                 this.setI(finalI);
                 this.setJ(finalJ);
+                a[agarrado.getI()][agarrado.getJ()] = agarrado;
                 this.setBounds( getPosicaoInicialX(), getPosicaoInicialY(), getLARGURA(), getALTURA());
             }
         }
@@ -503,4 +506,5 @@ public abstract class Atalho extends JPanel implements MouseListener {
     
 
 }
+
 
