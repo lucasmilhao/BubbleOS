@@ -75,17 +75,18 @@ public abstract class Atalho extends JPanel implements MouseListener {
             
             @Override
             public void mouseDragged(MouseEvent e) {
-                if(offset != null) {
-                    if(Atalho.this.isHasComponent()) {
 
-                        Atalho.setAgarrado(Atalho.this);
-                        
-                        int x = getX() + e.getX() - offset.x;
-                        int y = getY() + e.getY() - offset.y;
-                        setLocation(x, y);
-                        setActive(false);
+                    if(offset != null) {
+                        if(Atalho.this.isHasComponent()) {
+                            
+                            Atalho.setAgarrado(Atalho.this);
+                            
+                            int x = getX() + e.getX() - offset.x;
+                            int y = getY() + e.getY() - offset.y;
+                            setLocation(x, y);
+                            setActive(false);
+                        }
                     }
-                }
             }
         };
 
@@ -158,7 +159,7 @@ public abstract class Atalho extends JPanel implements MouseListener {
         menu.add(renomear);
     }
 
-    private void recalcularBounds(int i, int j) {
+    public void recalcularBounds(int i, int j) {
         
         posicaoInicialX = (j * LARGURA);
         posicaoInicialY = (i * ALTURA);
@@ -173,11 +174,7 @@ public abstract class Atalho extends JPanel implements MouseListener {
 
     private void pressionado() {
 
-        if(this.isActive()) {
-            this.setRun(true);
-        } 
-        else {
-            
+        if(!this.isActive()) {
             if(ativo != null) {
                 ativo.setActive(false);
                 ativo.repaint();
@@ -206,6 +203,7 @@ public abstract class Atalho extends JPanel implements MouseListener {
                     else p.setContadorI(p.getContadorI() - 1);
                     recalcularBounds(contadorI, contadorJ);
                     encontrado = true;
+                    p.getExplorar().exibirAtalhos();
                     break;
                 }
                 contadorJ++;
@@ -223,9 +221,11 @@ public abstract class Atalho extends JPanel implements MouseListener {
 
     @Override
     public void mousePressed(MouseEvent e) {
+        offset = e.getPoint();
         if(e.getButton() == MouseEvent.BUTTON1) {
             pressionado();
-            offset = e.getPoint();
+
+            if(run) run = false;
 
             if(getParent() instanceof TelaPrincipal tela) {
                 tela.setLayer(this, TelaPrincipal.getGRAB_LAYER());

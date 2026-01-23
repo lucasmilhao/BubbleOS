@@ -1,6 +1,7 @@
 package Visao;
 
 import Jogos.Dinossauro.Game;
+
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import javax.swing.*;
@@ -36,14 +37,15 @@ public final class Dinossauro extends Atalho {
         super.paintComponent(g);
     }
 
-    public static void abrir() {
+    public void abrir() {
+        this.setRun(true);
         new Game();
     }
 
     @Override
     public void mousePressed(MouseEvent e) {
         super.mousePressed(e);
-        if(e.getButton() == MouseEvent.BUTTON1 && this.isRun()) new Game();
+        if(e.getButton() == MouseEvent.BUTTON1 && e.getClickCount() == 2) abrir();
         repaint();
     }
 

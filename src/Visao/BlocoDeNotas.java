@@ -1,6 +1,7 @@
 package Visao;
 
 import Aplicativos.Notas;
+
 import java.awt.event.MouseEvent;
 import java.io.File;
 import javax.swing.ImageIcon;
@@ -47,13 +48,14 @@ public final class BlocoDeNotas extends Atalho {
 
 
     public void abrir() {
+        this.setRun(true);
         new Notas(arquivo);
     }
     
     @Override
     public void mousePressed(MouseEvent e) {
         super.mousePressed(e);
-        if(e.getButton() == MouseEvent.BUTTON1 && this.isRun()) new Notas(arquivo);
+        if(e.getButton() == MouseEvent.BUTTON1 && e.getClickCount() == 2) abrir();
         repaint();
     }
 }

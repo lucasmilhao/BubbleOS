@@ -49,12 +49,24 @@ public class Explorar extends JFrame {
         if(!pasta.getAtalhos().isEmpty()) {
             painel.remove(label);
             painel.setLayout(null);
-            for(Atalho a : pasta.getAtalhos()) {
-                a.setRun(false);
-                a.setActive(false);
-                a.removeMouseMotionListener(a.getMouseAdapter()); 
-                painel.add(a);
+
+            for(int i = 0; i < pasta.getContadorI() + 1; i++) {
+                for(int j = 0; j < pasta.getContadorJ(); j++) {
+                    Atalho a = pasta.getAtalhos().get(i + j);
+                    a.setRun(false);
+                    a.setActive(false);
+                    a.removeMouseMotionListener(a.getMouseAdapter());
+                    a.setI(i);
+                    a.setJ(j);
+                    a.recalcularBounds(a.getI(), a.getJ());
+                    painel.add(a);
+                }
             }
+        }
+        else {
+            painel.add(label);
+            painel.setLayout(new FlowLayout());
+            repaint();
         }
     }
 }

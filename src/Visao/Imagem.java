@@ -1,11 +1,9 @@
 package Visao;
 
-import java.awt.event.MouseEvent;
-
-import javax.swing.JMenuItem;
-
 import Aplicativos.MostraImagem;
 import java.awt.Dimension;
+import java.awt.event.MouseEvent;
+import javax.swing.JMenuItem;
 
 public class Imagem extends Atalho {
 
@@ -26,7 +24,10 @@ public class Imagem extends Atalho {
 
         JMenuItem mudarFundo = new JMenuItem("Selecionar como plano de fundo");
         mudarFundo.addActionListener(e1 -> setarPlano());
-        this.getMenu().setPreferredSize(new Dimension(200, 50));
+        JMenuItem abrir = new JMenuItem("Abrir");
+        abrir.addActionListener(e1 -> abrir());
+        this.getMenu().setPreferredSize(new Dimension(200, 75));
+        this.getMenu().add(abrir);
         this.getMenu().add(mudarFundo);
 
         this.getMenu().show(this, e.getX(), e.getY());
@@ -39,11 +40,16 @@ public class Imagem extends Atalho {
             tela.repaint();
         }
     }
+    
+    public void abrir() {
+        this.setRun(true);
+        new MostraImagem(this);
+    }
 
     @Override
     public void mousePressed(MouseEvent e) {
         super.mousePressed(e);
-        if(e.getButton() == MouseEvent.BUTTON1 && this.isRun()) new MostraImagem(this);
+        if(e.getButton() == MouseEvent.BUTTON1 && e.getClickCount() == 2) abrir();
         repaint();
     }
 }

@@ -16,9 +16,6 @@ public class TelaPrincipal extends JLayeredPane {
     private boolean corSolida;
     public Color corDeFundo;
     private Image planoFundo;
-    public int getCOLUNAS() {
-        return COLUNAS;
-    }
 
 
     private Dimension d;
@@ -91,6 +88,9 @@ public class TelaPrincipal extends JLayeredPane {
         if(corSolida) g.fillRect(0, 0, getWidth(), getHeight());
     }
 
+    public int getCOLUNAS() {
+        return COLUNAS;
+    }
     
     public void setCOLUNAS(int cOLUNAS) {
         COLUNAS = cOLUNAS;

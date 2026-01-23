@@ -110,6 +110,7 @@ public final class Pasta extends Atalho {
     }
 
     public void abrir() {
+        this.setRun(true);
         this.explorar = new Explorar(this);
     }
 
@@ -117,7 +118,7 @@ public final class Pasta extends Atalho {
     @Override
     public void mousePressed(MouseEvent e) {
         super.mousePressed(e);
-        if(e.getButton() == MouseEvent.BUTTON1 && this.isRun()) this.explorar = new Explorar(this);
+        if(e.getButton() == MouseEvent.BUTTON1 && e.getClickCount() == 2) abrir();
         repaint();
     }
 
