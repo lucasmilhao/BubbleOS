@@ -44,7 +44,7 @@
 </br>
 
 <div align="center">
-<img src=".github/readme-assets/icon-bolha.png" width="64" height="64"/>
+<img src="src/Imagens/bolha.png" width="64" height="64"/>
 <img src=".github/readme-assets/icon-pasta.png" width="64" height="64"/>
 <img src=".github/readme-assets/icon-notas.png" width="64" height="64"/>
 <img src=".github/readme-assets/icon-cobra.png" width="64" height="64"/>
