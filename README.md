@@ -45,7 +45,7 @@
 
 <div align="center">
 <img src="https://github.com/lucasmilhao/bubbleos/tree/main/src/Imagens/bolha.png" width="64" height="64"/>
-<img src="https://github.com/lucasmilhao/bubbleos/tree/main/src/Imagens/pasta.png" width="64" height="64"/>
+<img src="https://github.com/lucasmilhao/bubbleos/tree/main/src/Imagens/Pasta.png" width="64" height="64"/>
 <img src="https://github.com/lucasmilhao/bubbleos/tree/main/src/Imagens/notas.png" width="64" height="64"/>
 <img src="https://github.com/lucasmilhao/bubbleos/tree/main/src/Imagens/cobra.png" width="64" height="64"/>
 <img src="https://github.com/lucasmilhao/bubbleos/tree/main/src/Imagens/browser.png" width="64" height="64"/>
