@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://github.com/lucasmilhao/bubbleos/tree/src/Imagens/bolha.png" alt="BubbleOS" width="640"/>
+<img src="https://github.com/lucasmilhao/bubbleos/tree/main/src/Imagens/bolha.png" alt="BubbleOS" width="640"/>
 
 ### Um sistema operacional falso (e divertido) construído do zero em Java
 
@@ -44,11 +44,11 @@
 </br>
 
 <div align="center">
-<img src="https://github.com/lucasmilhao/bubbleos/tree/src/Imagens/bolha.png" width="64" height="64"/>
-<img src="https://github.com/lucasmilhao/bubbleos/tree/src/Imagens/pasta.png" width="64" height="64"/>
-<img src="https://github.com/lucasmilhao/bubbleos/tree/src/Imagens/notas.png" width="64" height="64"/>
-<img src="https://github.com/lucasmilhao/bubbleos/tree/src/Imagens/cobra.png" width="64" height="64"/>
-<img src="https://github.com/lucasmilhao/bubbleos/tree/src/Imagens/browser.png" width="64" height="64"/>
+<img src="https://github.com/lucasmilhao/bubbleos/tree/main/src/Imagens/bolha.png" width="64" height="64"/>
+<img src="https://github.com/lucasmilhao/bubbleos/tree/main/src/Imagens/pasta.png" width="64" height="64"/>
+<img src="https://github.com/lucasmilhao/bubbleos/tree/main/src/Imagens/notas.png" width="64" height="64"/>
+<img src="https://github.com/lucasmilhao/bubbleos/tree/main/src/Imagens/cobra.png" width="64" height="64"/>
+<img src="https://github.com/lucasmilhao/bubbleos/tree/main/src/Imagens/browser.png" width="64" height="64"/>
 </div>
 
 ---
